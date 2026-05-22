@@ -1,0 +1,179 @@
+/* CUSTOMIZATION */
+:root {
+  --background-color: #111111;
+  --text-color: white;
+  --button-color: white;
+  --button-text: black;
+
+  --main-font: 'Arial';
+  --title-size: 48px;
+  --text-size: 24px;
+
+  --button-width: 220px;
+  --button-height: 60px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--main-font);
+  background: var(--background-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+.page {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+}
+
+.active {
+  display: flex;
+}
+
+.center-content,
+.question-container,
+.puzzle-section,
+.reward-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+}
+
+.main-title {
+  font-size: var(--title-size);
+}
+
+.final-text {
+  font-size: 32px;
+  line-height: 1.6;
+}
+
+.main-button,
+.button-grid button,
+.popup button {
+  width: var(--button-width);
+  height: var(--button-height);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: var(--button-color);
+  color: var(--button-text);
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.main-button:hover,
+.button-grid button:hover,
+.popup button:hover {
+  transform: scale(1.05);
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.popup-content img {
+  width: 300px;
+  border-radius: 12px;
+}
+
+/* Puzzle */
+#puzzle-board {
+  width: 600px;
+  height: 600px;
+  display: grid;
+  //grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 200px);
+  gap: 0px;
+}
+
+.puzzle-piece {
+  width: 200px;
+  height: 200px;
+  //border: 0.5px solid white;
+  border: none;
+  display: block;
+  background-image: url('images/puzzle.jpg');
+  background-size: 600px 600px;
+  cursor: grab;
+}
+
+/* Coupons */
+.coupon-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.coupon {
+  width: 220px;
+  padding: 20px;
+  border: 2px dashed white;
+  border-radius: 16px;
+}
+
+.system-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: white;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.system-text {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Styles the correct popup buttons to sit side-by-side */
+.popup-buttons-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Slightly shrinks popup buttons if they are side-by-side so they fit */
+.popup-buttons-row button {
+  width: 110px; 
+  font-size: 14px;
+}

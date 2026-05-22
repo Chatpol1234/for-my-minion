@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>my minion :)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- PAGE 1 -->
+  <section class="page active" id="page1">
+    <div class="center-content">
+      <h1 class="main-title">MISSION INITIATED<br><br>Chatpol has survived 7 days without his minion<br><br>Immediate rescue required</h1>
+      <button class="main-button" onclick="nextPage(2)">
+        Start Mission
+      </button>
+    </div>
+  </section>
+
+  <!-- PAGE 2 -->
+  <section class="page" id="page2">
+    <div class="question-container">
+      <h2>WARNING!<br><br>Chatpol morale is critically low<br><br>Mission database requires immediate analysis<br><br>Please identify his primary weakness</h2>
+
+      <div class="button-grid">
+        <button onclick="openPopup('popup5')">forehead kisses</button>
+        <button onclick="openPopup('popup6')">oreos cheesecake</button>
+        <button onclick="openPopup('popup9')">he doesn't have any weakness</button>
+        <button onclick="openCorrectPopup(3)">you ;)</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 3 -->
+  <section class="page" id="page3">
+    <div class="question-container">
+      <h2>CRITICAL THREAT DETECTED<br><br>Minion has issued multiple dangerous statements<br><br>What body part is currently at highest risk?</h2>
+
+      <div class="button-grid">
+        <button onclick="openPopup('popup10')">arm</button>
+        <button onclick="openPopup('popup2')">nose</button>
+        <button onclick="openCorrectPopup(4)">EAR</button>
+        <button onclick="openPopup('popup3')">fingers</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 4 -->
+  <section class="page" id="page4">
+    <div class="question-container">
+      <h2>HIGH STRESS ENVIRONMENT DETECTED<br><br>During exam season, which phrase causes the highest probability of Minion annoyance?</h2>
+
+      <div class="button-grid">
+        <button onclick="openPopup('popup1')">don't stress out too much</button>
+        <button onclick="openCorrectPopup(5)">yeahhh it's fine</button>
+        <button onclick="openPopup('popup4')">you got it!</button>
+        <button onclick="openPopup('popup7')">don't sleep too late naa</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 5 -->
+  <section class="page" id="page5">
+    <div class="question-container">
+      <h2>WARNING.<br><br>Minion happiness levels dropping, immediate recovery item required<br><br>Which supply restores morale most effectively?</h2>
+
+      <div class="button-grid">
+        <button onclick="openPopup('popup8')">sour patch</button>
+        <button onclick="openPopup('popup10')">flowers</button>
+        <button onclick="openPopup('popup5')">food</button>
+        <button onclick="openCorrectPopup(6)">Chatpol Presence</button>
+      </div>
+    </div>
+  </section>
+
+<!-- PAGE 6 -->
+  <section class="page" id="page6">
+    <div class="question-container">
+      <h2>FINAL AUTHENTICATION REQUIRED<br><br>Mission logs reveal unusual bathroom behavior<br><br>Why does Chatpol believe teeth brushing should never be a solo activity?</h2>
+
+      <div class="button-grid">
+        <button onclick="openPopup('popup6')">teamwork</button>
+        <button onclick="openPopup('popup9')">emotional support brushing</button>
+        <button onclick="openPopup('popup2')">fear of brushing alone :(</button>
+        <button onclick="openCorrectPopup(7)">All of the above</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 7 -->
+  <section class="page" id="page7">
+    <div class="puzzle-section">
+      <h2>Complete The Puzzle</h2>
+
+      <div id="puzzle-board"></div>
+
+      <button class="main-button" onclick="nextPage(8)">
+        Continue
+      </button>
+    </div>
+  </section>
+
+  <!-- PAGE 8 -->
+  <section class="page" id="page8">
+    <div class="reward-container">
+      <h2>Rewards Unlocked</h2>
+
+      <div class="coupon-grid">
+        <div class="coupon">
+          <h3>Unlimited Free Hugs</h3>
+          <p>Redeem anytime</p>
+        </div>
+
+        <div class="coupon">
+          <h3>Movie Night Coupon</h3>
+          <p>Gonna make list soon hehe</p>
+        </div>
+
+        <div class="coupon">
+          <h3>5 seconds of Tickling</h3>
+          <p>Please don't lol</p>
+        </div>
+      </div>
+
+      <button class="main-button" onclick="nextPage(9)">
+        Click Me :)
+      </button>
+    </div>
+  </section>
+
+  <!-- PAGE 9 -->
+  <section class="page" id="page9">
+    <div class="center-content">
+      <h1 class="final-text">
+        That's all I have lmaoo but yeahhh...<br><br>
+        It feels weird being so far away from you<br><br>
+        So I made this dumb little thing<br><br>
+        Just wanna say I really miss you naa and hope you enjoy the game :)
+      </h1>
+    </div>
+  </section>
+
+  <!-- POPUPS -->
+  <div class="popup" id="popup1">
+    <div class="popup-content">
+      <img src="images/popup1.jpg" alt="popup image">
+      <button onclick="closePopup('popup1')">Go Back</button>
+    </div>
+  </div>
+
+  <div class="popup" id="popup2">
+    <div class="popup-content">
+      <img src="images/popup2.jpg" alt="popup image">
+      <button onclick="closePopup('popup2')">Go Back</button>
+    </div>
+  </div>
+
+  <div class="popup" id="popup3">
+    <div class="popup-content">
+      <img src="images/popup3.jpg" alt="popup image">
+      <button onclick="closePopup('popup3')">Go Back</button>
+    </div>
+  </div>
+
+  <div class="popup" id="popup4">
+    <div class="popup-content">
+      <img src="images/popup4.jpg" alt="popup image">
+      <button onclick="closePopup('popup4')">Go Back</button>
+    </div>
+  </div>
+
+  <div class="popup" id="popup5">
+    <div class="popup-content">
+      <img src="images/popup5.jpg" alt="popup image">
+      <button onclick="closePopup('popup5')">Go Back</button>
+    </div>
+  </div>
+
+  <div class="popup" id="popup6">
+    <div class="popup-content">
+      <img src="images/popup6.jpg" alt="popup image">
+      <button onclick="closePopup('popup6')">Go Back</button>
+    </div>
+  </div>
+
+  <div class="popup" id="popup7">
+    <div class="popup-content">
+      <img src="images/popup7.jpg" alt="popup image">
+      <button onclick="closePopup('popup7')">Go Back</button>
+    </div>
+  </div>
+
+  <div class="popup" id="popup8">
+    <div class="popup-content">
+      <img src="images/popup8.jpg" alt="popup image">
+      <button onclick="closePopup('popup8')">Go Back</button>
+    </div>
+  </div>
+
+  <div class="popup" id="popup9">
+    <div class="popup-content">
+      <img src="images/popup9.jpg" alt="popup image">
+      <button onclick="closePopup('popup9')">Go Back</button>
+    </div>
+  </div>
+
+  <div class="popup" id="popup10">
+    <div class="popup-content">
+      <img src="images/popup10.jpg" alt="popup image">
+      <button onclick="closePopup('popup10')">Go Back</button>
+    </div>
+  </div>
+
+
+
+<!-- NEW: CORRECT ANSWER POPUP -->
+  <!-- UPDATED: CORRECT ANSWER POPUP WITH IMAGE ID -->
+  <div class="popup" id="popup-correct">
+    <div class="popup-content">
+      <!-- Added id="correct-popup-img" below -->
+      <img id="correct-popup-img" src="images/correct.jpg" alt="Correct answer!">
+      <h3 style="color: black; margin: 0;">Correct! 🎉</h3>
+      <div class="popup-buttons-row">
+        <button onclick="closePopup('popup-correct')">Go Back</button>
+        <button onclick="proceedToNextPage()">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
